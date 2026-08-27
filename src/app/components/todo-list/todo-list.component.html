@@ -1,0 +1,56 @@
+<div class="container">
+  <h2>Todos</h2>
+
+  <form [formGroup]="form" (ngSubmit)="submit()" class="todo-form">
+    <div>
+      <label>Título</label>
+      <input type="text" formControlName="title" />
+    </div>
+
+    <div>
+      <label>Descripción</label>
+      <input type="text" formControlName="description" />
+    </div>
+
+    <div>
+      <label>
+        <input type="checkbox" formControlName="completed" />
+        Completado
+      </label>
+    </div>
+
+    <div class="buttons">
+      <button type="submit" [disabled]="form.invalid">{{ editingId ? 'Actualizar' : 'Crear' }}</button>
+      <button type="button" (click)="cancelEdit()" *ngIf="editingId">Cancelar</button>
+    </div>
+  </form>
+
+  <hr/>
+
+  <div *ngIf="loading">Cargando...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <table class="todo-table" *ngIf="todos.length">
+    <thead>
+      <tr>
+        <th>Hecho</th>
+        <th>Título</th>
+        <th>Descripción</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of todos">
+        <td><input type="checkbox" [checked]="t.completed" (change)="toggleCompleted(t)"/></td>
+        <td [class.completed]="t.completed">{{ t.title }}</td>
+        <td>{{ t.description }}</td>
+        <td>
+          <button (click)="edit(t)">Editar</button>
+          <button (click)="remove(t.id)">Borrar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="!loading && todos.length === 0">No hay tareas.</div>
+</div>

@@ -1,0 +1,8 @@
+.container { max-width: 800px; margin: 20px auto; font-family: Arial, sans-serif; }
+.todo-form div { margin-bottom: 8px; }
+.todo-form input[type="text"] { width: 100%; padding: 6px; }
+.buttons button { margin-right: 8px; }
+.todo-table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+.todo-table th, .todo-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+.completed { text-decoration: line-through; color: #777; }
+.error { color: red; margin-top: 8px; }
