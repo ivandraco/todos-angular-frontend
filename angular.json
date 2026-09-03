@@ -7,8 +7,25 @@
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "architect": {}
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/todos-angular-frontend",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "tsConfig": "tsconfig.app.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "all"
+            }
+          }
+        }
+      }
     }
   },
-  "defaultProject": "todos-angular-frontend"
+  "cli": {
+    "analytics": "a157b50b-207c-4d6f-a938-be8a2237006f"
+  }
 }
