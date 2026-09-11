@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "http://localhost:8080",
+    "target": "https://todos-backend-aqgkhpdsb6cac9dt.westus3-01.azurewebsites.net",
     "secure": false,
     "changeOrigin": true,
     "logLevel": "info"
