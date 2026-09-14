@@ -1,4 +1,15 @@
 html, body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  min-height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7ff 0%, #eef6ff 40%, #f8fbff 100%);
+  color: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button, input {
+  font: inherit;
 }
