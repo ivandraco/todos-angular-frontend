@@ -7,7 +7,7 @@ import { Todo } from '../models/todo.model';
   providedIn: 'root'
 })
 export class TodoService {
-  private baseUrl = '/api/todos';
+   private baseUrl = 'https://todos-backend-aqgkhpdsb6cac9dt.westus3-01.azurewebsites.net/api/todos';
 
   constructor(private http: HttpClient) {}
 
